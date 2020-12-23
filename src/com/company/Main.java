@@ -1,18 +1,17 @@
 package com.company;
 
-import java.text.DecimalFormat;
 import java.util.Random;
 
 public class Main {
-    static Random random = new Random();
+    private static Random random = new Random();
     public static void main(String[] args) {
 
         double[] fractionalArray = new double[15];
-
         int a,b,i=0,s=0,count=0;
-        double x, avarageNumber=0.0;
-        DecimalFormat df = new DecimalFormat("#.###");
+        double avarageNumber=0.0;
+
         System.out.print("Array numbers: ");
+
         while (i<15)
         {
             a=getRandomNumber();
@@ -49,14 +48,14 @@ public class Main {
         increaseAlgorithm();
     }
 
-    public static int getRandomNumber(){
+    private static int getRandomNumber(){
 
         return  random.nextInt(20)-4;
     }
 
 /////////////////////// ////////Доп. Задание /////////////////////////////////////////
 
-public static void increaseAlgorithm() {
+private static void increaseAlgorithm() {
     int[] increaseArray = new int[10];
     int k , swap ;
 
